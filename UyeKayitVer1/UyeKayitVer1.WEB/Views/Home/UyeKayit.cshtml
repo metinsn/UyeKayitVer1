@@ -1,0 +1,38 @@
+﻿@model List<UyeKayitVer1.Entitiy.Models.PType> 
+@{
+    ViewBag.Title = "Uye Kaydet";
+}
+
+ <hr style="border-color:crimson" />
+
+<form method="post"> 
+    <div class="btn-group">
+        <label for="usrname">İsim:</label>
+        <input type="text"  class="form-control" id="usrname" name="Pname">
+
+
+        <label for="usrsname">Soy Adı:</label>
+        <input type="text" class="form-control" id="usrsname" name="Lastname">
+
+
+        <label for="usremail">Email:</label>
+        <input type="email" class="form-control" id="usremail" name="Email">
+
+
+        <label for="usrnamephone">Telefon:</label>
+        <input type="number" class="form-control" id="usrnamephone" name="Phone">
+
+        <label for="usrTName">Görevi:</label>
+        <select class="form-control" name="PTypeID" id="usrTName" >
+
+            @foreach (var item in Model)
+            {
+                <option value="@item.ID">@item.TName</option>
+            }
+        </select>
+
+        <input class="btn btn-success btn-danger btn-block" type="submit" value="Kaydet" />
+    </div>
+
+    <hr style="border-color:crimson" />
+</form>

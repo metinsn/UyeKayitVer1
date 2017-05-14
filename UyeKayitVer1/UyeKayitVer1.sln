@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UyeKayitVer1.Entitiy", "UyeKayitVer1.Entitiy\UyeKayitVer1.Entitiy.csproj", "{FDA863FB-D144-4EB5-A4C1-D7CC867BD003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UyeKayitVer1.DAL", "UyeKayitVer1.DAL\UyeKayitVer1.DAL.csproj", "{E6AD42E2-8B33-4719-B1F9-76DDF827D15F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UyeKayitVer1.WEB", "UyeKayitVer1.WEB\UyeKayitVer1.WEB.csproj", "{9F895EEA-157E-43E3-B181-743974A971D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDA863FB-D144-4EB5-A4C1-D7CC867BD003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA863FB-D144-4EB5-A4C1-D7CC867BD003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA863FB-D144-4EB5-A4C1-D7CC867BD003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA863FB-D144-4EB5-A4C1-D7CC867BD003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6AD42E2-8B33-4719-B1F9-76DDF827D15F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6AD42E2-8B33-4719-B1F9-76DDF827D15F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6AD42E2-8B33-4719-B1F9-76DDF827D15F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6AD42E2-8B33-4719-B1F9-76DDF827D15F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F895EEA-157E-43E3-B181-743974A971D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F895EEA-157E-43E3-B181-743974A971D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F895EEA-157E-43E3-B181-743974A971D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F895EEA-157E-43E3-B181-743974A971D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
