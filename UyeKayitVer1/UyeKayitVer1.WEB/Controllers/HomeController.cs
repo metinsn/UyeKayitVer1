@@ -41,7 +41,7 @@ namespace UyeKayitVer1.WEB.Controllers
         public ActionResult UyeGörev(PType model)
         {
             PTypeDepo.Add(model);
-            return RedirectToAction("UyeGorev");
+            return RedirectToAction("UyeGörev");
         }
 
 
