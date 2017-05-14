@@ -30,10 +30,24 @@ namespace UyeKayitVer1.WEB.Controllers
             var deger = PersonDepo.GetAllVM();
             return View(deger);
         }
-        //public ActionResult Add()
-        //{
-        //    var deger = PersonDepo.GetAllVM();
-        //    return View(deger);
-        //}
+
+        public ActionResult UyeGörev()
+        {
+            var deger = PTypeDepo.GetAll();
+
+            return View(deger);
+        }
+        [HttpPost]
+        public ActionResult UyeGörev(PType model)
+        {
+            PTypeDepo.Add(model);
+            return RedirectToAction("UyeGorev");
+        }
+
+
+
+
+
+
     }
 }

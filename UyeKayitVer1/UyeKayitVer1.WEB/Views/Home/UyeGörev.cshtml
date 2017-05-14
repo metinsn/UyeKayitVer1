@@ -1,0 +1,42 @@
+﻿@model List<UyeKayitVer1.Entitiy.Models.PType>
+@{
+    ViewBag.Title = "Üye Görev Tanımı";
+}
+
+<h2>Üye Görev Tanımı</h2>
+
+<form method="post">
+    <div class="btn-group">
+        <input type="text" class="form-control" id="GorevName" name="TName">
+
+        <input class="btn btn-success btn-danger btn-block" type="submit" value="Kaydet" />
+    </div>
+</form>
+
+<hr style="border-color:crimson" />
+<div class="panel-body">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped">                    
+                    <tbody>
+                        <tr>
+                            @{
+                                foreach (var item in Model)
+                                {
+                                    <td>@item.TName</td>                                    
+                                }
+                            }
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div id="morris-bar-chart"></div>
+        </div>
+    </div>
+</div>
+<hr style="border-color:crimson" />
+
+
