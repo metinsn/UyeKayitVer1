@@ -45,7 +45,12 @@ namespace UyeKayitVer1.WEB.Controllers
         }
 
 
+        public ActionResult Login()
+        {
+            var deger = PTypeDepo.GetAll();
 
+            return View(deger);
+        }
 
 
 
