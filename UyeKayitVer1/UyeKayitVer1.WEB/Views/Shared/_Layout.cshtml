@@ -11,6 +11,9 @@
 <body>
     @{ if (Session["name"] != null)
         {
+
+            <h6>@Session["name"]</h6>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -23,7 +26,7 @@
                 @Html.ActionLink("Üye Listesi", "UyeListesi", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Üye Görev Tanımı", "UyeGörev", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Kullanıcı Kayıt", "User", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Çıkış", "Login", "Login", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Çıkış", "Logout", "Login", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">

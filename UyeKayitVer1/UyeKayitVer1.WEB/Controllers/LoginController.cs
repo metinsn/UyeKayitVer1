@@ -30,16 +30,17 @@ namespace UyeKayitVer1.WEB.Controllers
         [HttpPost]
         public ActionResult Login(FormCollection frm)
         {
+            int sayi;
             string uname = frm.Get("userName");
             string pass = frm.Get("password");
 
-            //using (UyeKayitDbBaglan db = new UyeKayitDbBaglan())
-            //{
-            //    return db.User.Count(w => new PersonVM );
+            using (UyeKayitDbBaglan db = new UyeKayitDbBaglan())
+            {
+                 sayi = db.User.Count(w => w.UName== uname && w.Pass == pass);
 
-            //}
+            }
 
-                if (uname == "metin" && pass == "1")
+            if (sayi>0)
             {
                 Session["name"] = "Metin";
                 Session["pass"] = "1";
@@ -54,7 +55,6 @@ namespace UyeKayitVer1.WEB.Controllers
 
         public ActionResult Logout()
         {
-            Session["name"] = null;
             Session.Abandon();
             return RedirectToAction("Login", "Login");
         }
