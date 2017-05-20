@@ -19,7 +19,10 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        @Html.ActionLink("Üye Kaydet", "UyeKayit", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @*@if (Session["ID"] == "2" )
+                        {*@
+                          @Html.ActionLink("Üye Kaydet", "UyeKayit", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                       @* };*@                       
                         @Html.ActionLink("Üye Listesi", "UyeListesi", "Home", new { area = "" }, new { @class = "navbar-brand" })
                         @Html.ActionLink("Üye Görev Tanımı", "UyeGörev", "Home", new { area = "" }, new { @class = "navbar-brand" })
                         @Html.ActionLink("Kullanıcı Kayıt", "User", "Home", new { area = "" }, new { @class = "navbar-brand" })

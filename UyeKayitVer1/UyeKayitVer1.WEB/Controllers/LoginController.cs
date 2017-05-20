@@ -35,7 +35,7 @@ namespace UyeKayitVer1.WEB.Controllers
             {
                 Session["name"] = uname;
                 Session["ID"] = ID;
-                return RedirectToAction("UyeKayit", "Home");
+                return RedirectToAction("UyeListesi", "Home");
             }
             else
             {

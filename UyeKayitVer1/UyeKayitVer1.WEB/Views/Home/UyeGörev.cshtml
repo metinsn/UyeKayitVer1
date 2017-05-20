@@ -4,7 +4,8 @@
 }
 
 <h2>Üye Görev Tanımı</h2>
-
+@*@if (Session["ID"] == "1")
+{*@
 <form method="post">
     <div class="btn-group">
         <input type="text" class="form-control" id="GorevName" name="TName">
@@ -43,6 +44,7 @@
         </div>
     </div>
 </div>
+                                @*  *@}
 <hr style="border-color:crimson" />
 
 
