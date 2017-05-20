@@ -16,6 +16,7 @@ namespace UyeKayitVer1.Entitiy.Context
 
         public virtual DbSet<Person> Person { get; set; }
         public virtual DbSet<PType> PType { get; set; }
+        public virtual DbSet<User> User { get; set; }
     }
 
     public class UyeKayitSetInitializer : CreateDatabaseIfNotExists<UyeKayitDbBaglan>
@@ -23,18 +24,19 @@ namespace UyeKayitVer1.Entitiy.Context
         protected override void Seed(UyeKayitDbBaglan db)
         {
             db.PType.AddRange(new List<PType>()
-                {
+            {
                 new PType() { TName="Genel Müdür"},
                 new PType() { TName="Müdür"},
                 new PType() { TName="Eleman"},
                 new PType() { TName="Stajer"},
             });
+            db.User.AddRange(new List<User>()
+            {
+                new User() { UName="Admin",Pass="Admin"},
+            });
             db.SaveChanges();
         }
-
-
     }
-
 }
 
 

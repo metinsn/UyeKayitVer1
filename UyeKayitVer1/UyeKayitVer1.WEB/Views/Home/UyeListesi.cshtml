@@ -20,19 +20,19 @@
                             <th>Üyelik Sınıfı</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody>                        
                             @{
                                 foreach (var item in Model)
                                 {
+                                    <tr>
                                     <td>@item.Pname</td>
                                     <td>@item.Lastname</td>
                                     <td>@item.Email</td>
                                     <td>@item.Phone</td>
                                     <td>@item.TName</td>
+                                    </tr>
                                 }
-                            }
-                        </tr>
+                            }                       
                     </tbody>
                 </table>
             </div>

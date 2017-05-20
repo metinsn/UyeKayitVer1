@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Depolar\PersonDepo.cs" />
     <Compile Include="Depolar\PTypeDepo.cs" />
+    <Compile Include="Depolar\UserDepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

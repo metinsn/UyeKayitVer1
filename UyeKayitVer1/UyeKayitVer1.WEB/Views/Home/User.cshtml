@@ -1,0 +1,63 @@
+﻿@model List<UyeKayitVer1.Entitiy.Models.User>
+
+@{
+    ViewBag.Title = "User";
+}
+
+<h2>Kullanıcı kayıt</h2>
+
+<form method="post">
+    <div class="btn-group">
+        <label for="User">Adı:</label>
+        <input type="text" class="form-control" id="User" name="UName">
+        <label for="UserSname">Soy Adı:</label>
+        <input type="text" class="form-control" id="UserSname" name="Usname">
+        <label for="Usertype">Kullanıcı Türü:</label>
+        <input type="text" class="form-control" id="Usertype" name="UserType">
+        <label for="Usertype">Şifre:</label>
+        <input type="text" class="form-control" id="Usertype" name="UserType">
+        <input class="btn btn-success btn-danger btn-block" type="submit" value="Kaydet" />
+    </div>
+</form>
+
+<hr style="border-color:crimson" />
+<div class="panel-body">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>İsmi</th>
+                            <th>Soyadı</th>
+                            <th>Kullanıcı Türü</th>
+                            <th>Şifre</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.UName</td>
+                                    <td>@item.Usname</td>
+                                    <td>@item.UserType</td>
+                                    <td>@item.Pass</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div id="morris-bar-chart"></div>
+        </div>
+    </div>
+</div>
+<hr style="border-color:crimson" />
+
+
+
+

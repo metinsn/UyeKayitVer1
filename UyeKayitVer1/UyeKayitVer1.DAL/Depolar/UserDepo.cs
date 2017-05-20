@@ -8,23 +8,22 @@ using UyeKayitVer1.Entitiy.Models;
 
 namespace UyeKayitVer1.DAL.Depolar
 {
-    public class PTypeDepo
+    public class UserDepo
     {
-        public static void Add( PType  PType)
+        public static void Add(User User)
         {
             using (UyeKayitDbBaglan db = new UyeKayitDbBaglan())
             {
-                db. PType.Add( PType);
+                db.User.Add(User);
                 db.SaveChanges();
             }
         }
-        public static List< PType> GetAll()
+        public static List<User> GetAll()
         {
             using (UyeKayitDbBaglan db = new UyeKayitDbBaglan())
             {
-                return db. PType.ToList();
+                return db.User.ToList();
             }
-        }     
-
+        }
     }
 }

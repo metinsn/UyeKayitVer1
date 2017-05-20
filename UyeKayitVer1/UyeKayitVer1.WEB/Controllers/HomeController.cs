@@ -45,12 +45,19 @@ namespace UyeKayitVer1.WEB.Controllers
         }
 
 
-        public ActionResult Login()
+        public ActionResult User()
         {
-            var deger = PTypeDepo.GetAll();
+            var deger = UserDepo.GetAll();
 
             return View(deger);
         }
+        [HttpPost]
+        public ActionResult User(User model)
+        {
+            UserDepo.Add(model);
+            return RedirectToAction("User");
+        }
+
 
 
 
