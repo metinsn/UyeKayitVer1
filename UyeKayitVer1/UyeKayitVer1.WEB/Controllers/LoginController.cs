@@ -28,7 +28,6 @@ namespace UyeKayitVer1.WEB.Controllers
             {
                  Num = db.User.Count(w => w.UName== uname && w.Pass == pass);
                  ID =  db.User.Where(w =>  w.UName == uname && w.Pass == pass).Select(w=> w.UserTypeID).ToString();
-
             }
 
             if (Num > 0)
