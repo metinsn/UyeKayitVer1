@@ -41,7 +41,6 @@ namespace UyeKayitVer1.DAL.Depolar
                     TName = w.PType.TName,
                 }).ToList();
 
-
     }
         }
 

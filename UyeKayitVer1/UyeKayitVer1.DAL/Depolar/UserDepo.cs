@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UyeKayitVer1.Entitiy.Context;
 using UyeKayitVer1.Entitiy.Models;
+using UyeKayitVer1.Entitiy.Viewmodel;
 
 namespace UyeKayitVer1.DAL.Depolar
 {
@@ -23,6 +24,21 @@ namespace UyeKayitVer1.DAL.Depolar
             using (UyeKayitDbBaglan db = new UyeKayitDbBaglan())
             {
                 return db.User.ToList();
+            }
+        }
+        public static List<UserVM> GetAllVM()
+        {
+
+            using (UyeKayitDbBaglan db = new UyeKayitDbBaglan())
+            {
+                return db.User.Select(w => new UserVM
+                {
+                    UName = w.UName,
+                    Usname = w.Usname,
+                    UserType = w.UserType.UserTypeName,
+                    Pass = w.Pass,
+                }).ToList();
+
             }
         }
     }

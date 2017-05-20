@@ -12,45 +12,40 @@
     @{ if (Session["name"] != null)
         {
 
-            <h6>@Session["name"]</h6>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Üye Kaydet", "UyeKayit", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Üye Listesi", "UyeListesi", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Üye Görev Tanımı", "UyeGörev", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Kullanıcı Kayıt", "User", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Çıkış", "Logout", "Login", new { area = "" }, new { @class = "navbar-brand" })
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Üye Kaydet", "UyeKayit", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Üye Listesi", "UyeListesi", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Üye Görev Tanımı", "UyeGörev", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Kullanıcı Kayıt", "User", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Çıkış", "Logout", "Login", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav"></ul>
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
+
+            <div class="container body-content">
+                @RenderBody()
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Metin ŞEN</p>
+                </footer>
             </div>
-        </div>
-    </div>
-           
-    <div class="container body-content">
-        @RenderBody()         
 
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Metin ŞEN</p>
-        </footer>
-    </div>
-
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+            <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+            <script src="~/Scripts/bootstrap.min.js"></script>
         }
         else
         {
             <div class="container body-content">
                 @RenderBody()
-
                 <footer>
                     <p>&copy; @DateTime.Now.Year - Metin ŞEN</p>
                 </footer>

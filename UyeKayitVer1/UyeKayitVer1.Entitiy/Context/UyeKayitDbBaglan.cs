@@ -17,6 +17,7 @@ namespace UyeKayitVer1.Entitiy.Context
         public virtual DbSet<Person> Person { get; set; }
         public virtual DbSet<PType> PType { get; set; }
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<UserType> UserType { get; set; }
     }
 
     public class UyeKayitSetInitializer : CreateDatabaseIfNotExists<UyeKayitDbBaglan>
@@ -34,6 +35,15 @@ namespace UyeKayitVer1.Entitiy.Context
             {
                 new User() { UName="Admin",Pass="Admin"},
             });
+
+            db.UserType.AddRange(new List<UserType>()
+            {
+                new UserType() { UserTypeName="Admin"},
+                //new UserType() { UserTypeName="Yönetici"},
+                //new UserType() { UserTypeName="Uye Kayýt"},
+                //new UserType() { UserTypeName="Uye Ýzleme"},
+            });
+
             db.SaveChanges();
         }
     }
