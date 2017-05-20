@@ -31,17 +31,18 @@ namespace UyeKayitVer1.Entitiy.Context
                 new PType() { TName="Eleman"},
                 new PType() { TName="Stajer"},
             });
+          
             db.User.AddRange(new List<User>()
             {
-                new User() { UName="Admin",Pass="Admin"},
+                new User() { UName="Admin",Pass="Admin",UserTypeID=1},
             });
 
             db.UserType.AddRange(new List<UserType>()
             {
-                new UserType() { UserTypeName="Admin"},
-                //new UserType() { UserTypeName="Yönetici"},
-                //new UserType() { UserTypeName="Uye Kayýt"},
-                //new UserType() { UserTypeName="Uye Ýzleme"},
+                new UserType() { ID=1,UserTypeName="Admin"},
+                new UserType() { ID=2,UserTypeName="Yönetici"},
+                new UserType() { ID=3,UserTypeName="Üye Kayýt"},
+                new UserType() { ID=4,UserTypeName="Üye Ýzleme"},
             });
 
             db.SaveChanges();

@@ -19,20 +19,22 @@ namespace UyeKayitVer1.WEB.Controllers
         [HttpPost]
         public ActionResult Login(FormCollection frm)
         {
-            int sayi;
+            int Num;
+            string ID;
             string uname = frm.Get("userName");
             string pass = frm.Get("password");
 
             using (UyeKayitDbBaglan db = new UyeKayitDbBaglan())
             {
-                 sayi = db.User.Count(w => w.UName== uname && w.Pass == pass);
+                 Num = db.User.Count(w => w.UName== uname && w.Pass == pass);
+                 ID =  db.User.Where(w =>  w.UName == uname && w.Pass == pass).Select(w=> w.UserTypeID).ToString();
 
             }
 
-            if (sayi>0)
+            if (Num > 0)
             {
-                Session["name"] = "Metin";
-                Session["pass"] = "1";
+                Session["name"] = uname;
+                Session["ID"] = ID;
                 return RedirectToAction("UyeKayit", "Home");
             }
             else

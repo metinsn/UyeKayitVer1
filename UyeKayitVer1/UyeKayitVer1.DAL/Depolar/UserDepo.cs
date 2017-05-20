@@ -35,7 +35,7 @@ namespace UyeKayitVer1.DAL.Depolar
                 {
                     UName = w.UName,
                     Usname = w.Usname,
-                    UserType = w.UserType.UserTypeName,
+                    UserTypeName = w.UserType.UserTypeName,
                     Pass = w.Pass,
                 }).ToList();
 
