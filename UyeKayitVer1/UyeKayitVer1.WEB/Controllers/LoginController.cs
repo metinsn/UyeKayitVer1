@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UyeKayitVer1.Entitiy.Context;
+using UyeKayitVer1.Entitiy.Viewmodel;
 
 namespace UyeKayitVer1.WEB.Controllers
 {
@@ -31,7 +33,13 @@ namespace UyeKayitVer1.WEB.Controllers
             string uname = frm.Get("userName");
             string pass = frm.Get("password");
 
-            if (uname == "metin" && pass == "1")
+            //using (UyeKayitDbBaglan db = new UyeKayitDbBaglan())
+            //{
+            //    return db.User.Count(w => new PersonVM );
+
+            //}
+
+                if (uname == "metin" && pass == "1")
             {
                 Session["name"] = "Metin";
                 Session["pass"] = "1";
