@@ -10,17 +10,6 @@ namespace UyeKayitVer1.WEB.Controllers
 {
     public class LoginController : Controller
     {
-        public ActionResult Index()
-        {
-            if (Session["name"] != null)
-            {
-                return View();
-            }
-            else
-            {
-                return RedirectToAction("Login", "Login");
-            }
-        }
 
         public ActionResult Login()
         {

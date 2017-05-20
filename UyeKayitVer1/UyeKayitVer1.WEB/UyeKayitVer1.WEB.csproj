@@ -170,7 +170,6 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Home\UyeListesi.cshtml" />
     <Content Include="Views\Home\UyeGörev.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Home\User.cshtml" />
     <None Include="Web.Debug.config">
